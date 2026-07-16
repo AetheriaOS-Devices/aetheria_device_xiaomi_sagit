@@ -40,8 +40,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 include vendor/xiaomi/sagit/BoardConfigVendor.mk
 
 # Kernel clang
-TARGET_KERNEL_CLANG_PATH := /home/n1709/AetheriaOS/prebuilts/clang/kernel/linux-x86/clang-r416183b
+TARGET_KERNEL_CLANG_PATH := $(BUILD_TOP)/prebuilts/clang/kernel/linux-x86/clang-r416183b
 
 # Allow make for kernel build
 KERNEL_MAKE_CMD := prebuilts/build-tools/linux-x86/bin/make
-TARGET_NO_KERNEL := true
