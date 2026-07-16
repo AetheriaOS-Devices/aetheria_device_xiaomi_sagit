@@ -16,11 +16,13 @@
 
 # Inherit from msm8998-common
 include device/xiaomi/msm8998-common/BoardConfigCommon.mk
+include vendor/aetheria/config/BoardConfigAetheria.mk
 
 DEVICE_PATH := device/xiaomi/sagit
 
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/xiaomi/sagit.config
+TARGET_KERNEL_VERSION := 4.4
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sagit
@@ -36,3 +38,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from proprietary files
 include vendor/xiaomi/sagit/BoardConfigVendor.mk
+
+# Kernel clang
+TARGET_KERNEL_CLANG_PATH := /home/n1709/AetheriaOS/prebuilts/clang/kernel/linux-x86/clang-r416183b
+
+# Allow make for kernel build
+KERNEL_MAKE_CMD := prebuilts/build-tools/linux-x86/bin/make
