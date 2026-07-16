@@ -44,3 +44,4 @@ TARGET_KERNEL_CLANG_PATH := /home/n1709/AetheriaOS/prebuilts/clang/kernel/linux-
 
 # Allow make for kernel build
 KERNEL_MAKE_CMD := prebuilts/build-tools/linux-x86/bin/make
+TARGET_NO_KERNEL := true
